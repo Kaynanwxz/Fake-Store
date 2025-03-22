@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    transition-duration: 300ms;
 }
 
 body {
@@ -14,32 +15,45 @@ main {
     width: 100%;
     height: 100%;
 
+    background: rgb(3, 139, 187);
+   
+
+
+
     header {
         width: 100%;
         height: 80px;
+
+        
 
         display: flex;
         justify-content: center;
         align-items: center;
 
-        background-color: rgb(27, 27, 27);
+
 
         input {
             width: 500px;
             height: 30px;
 
             border-radius: 15px;
+            border: 0px;
 
             padding-left: 10px;
         }
 
         input:focus {
             outline: none;
+            border: 2px solid #03223f;
         }
     }
+
     .types {
         width: 100%;
-        height: 200px;
+        height: 100px;
+
+        color: white;
+        
 
         display: flex;
         justify-content: center;
@@ -48,10 +62,24 @@ main {
 
         row-gap: 10px;
 
-        h3{
+        h3 {
             width: 180px;
             display: flex;
             justify-content: space-between;
+        }
+        select{
+            width: 110px;
+            height: 22px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+
+            text-align: center;
         }
     }
 
@@ -71,6 +99,7 @@ main {
         row-gap: 50px;
 
         flex-wrap: wrap;
+        background: linear-gradient(180deg, rgba(3, 139, 187, 1) 0%, #03223f 30%);
 
 
 
@@ -89,30 +118,31 @@ main {
 
             flex-direction: column;
 
-            border: 2px solid rgb(0, 0, 0);
+            border: 3px solid black;
             border-radius: 10px;
-            box-shadow: 6px 10px 17px -6px rgba(0, 0, 0, 0.75);
+            box-shadow: inset 0px 0px 20px 0px #000000b3;
 
             list-style: none;
 
-            transition-duration: 300ms;
 
 
 
 
         }
 
+
         .card:hover {
             filter: brightness(1.05);
             transform: scale(1.05);
             filter: blur(0);
-            transition-duration: 300ms;
+
             cursor: pointer;
+            border: 3px solid  rgba(3, 139, 187, 1);
 
             img,
             .h {
                 transform: scale(1.05);
-                transition-duration: 300ms;
+
 
             }
 
@@ -136,7 +166,7 @@ main {
             justify-content: center;
             align-items: center;
 
-            transition-duration: 200ms;
+
 
         }
 

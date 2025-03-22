@@ -1,9 +1,8 @@
 const apiurl = "https://fakestoreapi.com/products/"
 let cards = document.getElementById('cards')
 let search = document.getElementById('search')
+let ordem = document.getElementById('ordem');
 let conteudo = [];
-let filtrado = [];
-let newfiltrado = [];
 
 
 search.addEventListener("input", () => {
@@ -51,13 +50,11 @@ function gerarCard() {
             </li>`
 
     });
-
 }
 
 function filtrar(search) {
-    newfiltrado = [];
-    filtrado = backupData;
-    filtrado.forEach((element) => {
+    let newfiltrado = [];
+    backupData.forEach((element) => {
         element.title = element.title.toLowerCase();
         if (element.title.includes(search)) {
             newfiltrado.push(element)
@@ -67,8 +64,8 @@ function filtrar(search) {
     gerarCard()
 }
 
-document.getElementById('ordem').addEventListener('click', function ordenar(event) {
-    switch (document.getElementById('ordem').value) {
+ordem.addEventListener('click', function ordenar(event) {
+    switch (ordem.value) {
 
         case 'valor1':
             conteudo.sort(function (a, b) {
